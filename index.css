@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #2F80ED;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    padding: 0 40px 0 40px;
+    background-color: rgb(228, 228, 228);
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-link + .menu-link {
+    margin-left: 30px;
+}
+
+.menu-link {
+    font-weight: bold;
+}
+
+.menu-link:hover {
+    border-bottom: 3px solid var(--main-color);
+}
+
+.menu-icon {
+    display: none;
+}
+
+button.menu-btn {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0 40px 0;
+}
+
+div.green-label {
+    background-color: #b6d6ff;
+    color: var(--main-color);
+    padding: 10px 0 10px 0;
+    width: 30%;
+    font-weight: bold;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-heading {
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.main-para {
+    line-height: 30px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+div.input-container > div {
+    margin-right: 10px;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    text-align: center;
+}
+
+input:focus {
+    outline: 2px solid var(--main-color);
+}
+
+input.job-input {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+input[type="search"]::placeholder {
+    text-align: center;
+}
+
+.search-btn {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.input-icon {
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 15px;
+}
+
+.search-icon {
+    font-weight: bolder;
+}
+
+.col-1, .col-2 {
+    flex: 50%;
+}
+
+.col-2 > img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding: 0 25px 0 25px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav > div {
+        margin-bottom: 10px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .col-1, .col-2 {
+        flex: 100%;
+    }
+
+    .col-1 {
+        order: 2;
+    }
+
+    .col-2 {
+        order: 1;
+    }
+
+    .col-2 > img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    div.green-label {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .main-heading {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .main-para {
+      text-align: center;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input.job-input {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-btn {
+        background-color: #2165F2;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        cursor: pointer;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        float: right;
+    }
+}
