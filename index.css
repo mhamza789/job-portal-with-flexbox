@@ -37,6 +37,11 @@ nav div a {
     color: black;
 }
 
+.logo {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
 .menu-link + .menu-link {
     margin-left: 30px;
 }
@@ -60,6 +65,10 @@ button.menu-btn {
     padding: 15px 40px;
     cursor: pointer;
     border-radius: 50px;
+}
+
+button.menu-btn:hover {
+    background-color: #2460af;
 }
 
 header {
@@ -125,6 +134,10 @@ input[type="search"]::placeholder {
     cursor: pointer;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+}
+
+.search-btn:hover {
+    background-color: #2460af;
 }
 
 .input-icon {
